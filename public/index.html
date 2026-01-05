@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>Welcome</title>
-  <meta name="description" content="A minimal, static website.">
-  style.css
+  <meta name="description" content="A minimal, static website."> 
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">
-        Menu
-      </button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
       <div id="primary-links" class="links">
-        index.htmlHome</a>
-        page-two.htmlPage Two</a>
-        page-three.htmlPage Three</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="page-two.html">Page Two</a>
+        <a href="page-three.html">Page Three</a>
       </div>
     </nav>
   </header>
@@ -48,9 +46,7 @@
   </footer>
 
   <script>
-    // Lightweight enhancement: current year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Optional: toggle menu state for screen readers; visual toggle is pure CSS
     const btn = document.querySelector('.menu-toggle');
     const links = document.getElementById('primary-links');
     if (btn && links) {
@@ -63,4 +59,3 @@
   </script>
 </body>
 </html>
-``

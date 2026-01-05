@@ -1,30 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page Three</title>
-  <meta name="description" content="Another minimal, static page.">
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Page Two</title>
+  <meta name="description" content="A minimal, static page."> 
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/page-two.html">Page Two</a>
-      <a href="/page-three.html" aria-current="page">Page Three</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
+      <div id="primary-links" class="links">
+        <a href="index.html">Home</a>
+        <a href="page-two.html" aria-current="page">Page Two</a>
+        <a href="page-three.html">Page Three</a>
+      </div>
     </nav>
   </header>
 
   <main class="container">
-    <h1>Page Three</h1>
-    <p>A quiet corner. Placeholder content lives here.</p>
+    <h1>Page Two</h1>
+    <p>Just a simple page with neutral text. Nothing to see here, and that's the point.</p>
 
-    <ul class="list">
-      <li>Simple.</li>
-      <li>Fast.</li>
-      <li>Uncomplicated.</li>
-    </ul>
+    <details>
+      <summary>More (not much)</summary>
+      <p>Expandable content to demonstrate basic semantics without adding any personal information.</p>
+    </details>
   </main>
 
   <footer class="site-footer">
@@ -32,6 +34,15 @@
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.querySelector('.menu-toggle');
+    const links = document.getElementById('primary-links');
+    if (btn && links) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        links.classList.toggle('open', !expanded);
+      });
+    }
   </script>
 </body>
 </html>
