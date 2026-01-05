@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome</title>
   <meta name="description" content="A minimal, static website.">
-  <link rel="preload" href="/style.css" as="style">
-  <link rel="stylesheet" href="/style.css">
+  style.css
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page-two.html">What?</a>
-      <a href="/page-three.html">SomeMore</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">
+        Menu
+      </button>
+      <div id="primary-links" class="links">
+        index.htmlHome</a>
+        page-two.htmlPage Two</a>
+        page-three.htmlPage Three</a>
+      </div>
     </nav>
   </header>
 
@@ -46,6 +50,17 @@
   <script>
     // Lightweight enhancement: current year
     document.getElementById('year').textContent = new Date().getFullYear();
+    // Optional: toggle menu state for screen readers; visual toggle is pure CSS
+    const btn = document.querySelector('.menu-toggle');
+    const links = document.getElementById('primary-links');
+    if (btn && links) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        links.classList.toggle('open', !expanded);
+      });
+    }
   </script>
 </body>
 </html>
+``
