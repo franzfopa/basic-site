@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome</title>
+  <meta name="description" content="A minimal, static website.">
+  <link rel="preload" href="/style.css" as="style">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/page-two.html">Page Two</a>
+      <a href="/page-three.html">Page Three</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Minimal Site</h1>
+      <p>This is a simple, quiet homepage. It doesn't say much—just enough to be here.</p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Neutral Content</h2>
+        <p>A small space on the web with no particular message.</p>
+      </article>
+      <article class="card">
+        <h2>Stable & Fast</h2>
+        <p>Plain HTML and CSS, no frameworks, quick to load.</p>
+      </article>
+      <article class="card">
+        <h2>Accessible</h2>
+        <p>Readable contrast, semantic markup, keyboard-friendly.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span></small>
+  </footer>
+
+  <script>
+    // Lightweight enhancement: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Three</title>
+  <meta name="description" content="Another minimal, static page.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/page-two.html">Page Two</a>
+      <a href="/page-three.html" aria-current="page">Page Three</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Page Three</h1>
+    <p>A quiet corner. Placeholder content lives here.</p>
+
+    <ul class="list">
+      <li>Simple.</li>
+      <li>Fast.</li>
+      <li>Uncomplicated.</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span></small>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
