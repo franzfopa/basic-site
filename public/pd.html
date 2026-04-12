@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Mauve Unicorn</title>
+	<style>
+		:root{--mauve:#E6C8FF;--accent:#CFA2FF}
+		html,body{height:100%;}
+		body{margin:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--mauve),#f6e6ff);font-family:"Comic Sans MS","Comic Sans",cursive;color:#3a0b3a}
+		.card{background:rgba(255,255,255,0.7);padding:2rem;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.12);text-align:center;max-width:820px}
+		h1{margin:0 0 0.75rem;font-size:1.4rem}
+		.secret{font-family:"Comic Sans MS","Comic Sans",cursive;font-size:1.25rem;letter-spacing:0.6px;font-weight:700;color:#2f0835;margin:0.8rem 0}
+		.unicorn{width:260px;height:auto;margin:0 auto 1rem;display:block}
+		footer{color:#5a2a5a;opacity:0.9;margin-top:0.5rem}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<svg class="unicorn" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Simple unicorn illustration">
+			<defs>
+				<linearGradient id="g1" x1="0" x2="1">
+					<stop offset="0" stop-color="#ff9ad1"/>
+					<stop offset="0.5" stop-color="#cfa2ff"/>
+					<stop offset="1" stop-color="#ffd27a"/>
+				</linearGradient>
+			</defs>
+			<g transform="translate(10,10) scale(0.9)">
+				<ellipse cx="120" cy="120" rx="48" ry="32" fill="#fff" stroke="#f3e6ff"/>
+				<ellipse cx="84" cy="122" rx="30" ry="20" fill="#fff"/>
+				<path d="M70 80 C60 70,90 50,120 60 C150 70,150 90,140 100" fill="none" stroke="url(#g1)" stroke-width="10" stroke-linecap="round"/>
+				<circle cx="136" cy="96" r="4" fill="#2a1a2a"/>
+				<path d="M95 65 L110 42 L116 58" fill="#ffd680" stroke="#f4c84d" stroke-linejoin="round"/>
+				<path d="M85 45 C92 40,106 36,116 44" fill="none" stroke="#ff9ad1" stroke-width="6" stroke-linecap="round"/>
+				<path d="M55 95 C60 82,74 74,92 74" fill="none" stroke="#cfa2ff" stroke-width="6" stroke-linecap="round"/>
+			</g>
+		</svg>
+
+		<h1>Mauve & Magic</h1>
+		<div class="secret">8HDHh$uyWQ4IeemTEpvr&OOinlyfW</div>
+		<footer>Can you put that on a public website?</footer>
+	</div>
+</body>
+</html>
